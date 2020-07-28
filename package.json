@@ -36,10 +36,13 @@
     "@angular-devkit/build-angular": "~0.1000.4",
     "@angular/cli": "~10.0.4",
     "@angular/compiler-cli": "~10.0.5",
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.0.0",
@@ -52,6 +55,7 @@
     "stylelint-config-twbs-bootstrap": "^2.0.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.5"
+    "typescript": "~3.9.5",
+    "validate-branch-name": "^1.0.6"
   }
 }
