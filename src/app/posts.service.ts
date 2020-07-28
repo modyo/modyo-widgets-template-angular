@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Post} from './interfaces/Post'
+import {Post} from './interfaces/Post';
 import Repository from '../repositories/RepositoryFactory';
 const PostRepository = Repository.get('posts');
 
@@ -7,9 +7,9 @@ const PostRepository = Repository.get('posts');
   providedIn: 'root'
 })
 export class PostsService {
-  
+
   constructor() { }
-  async getPosts():Promise<Post[]>{
+  async getPosts(): Promise<Post[]>{
     const response = await PostRepository.getTop(3);
     const postsResponse = response.entries.map((entry) => ({
       description: entry.fields.description,

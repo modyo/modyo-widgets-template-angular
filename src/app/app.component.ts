@@ -10,20 +10,20 @@ import {PostsService} from './posts.service';
 })
 
 export class AppComponent implements OnInit {
-  posts=[]
+  posts = [];
   title = 'modyo-widgets-template-angular';
-  siteName='My Site';
-  year = '2020'
-  heart = faHeart
-  
-  constructor(private postsService:PostsService){}
+  siteName = 'My Site';
+  year = '2020';
+  heart = faHeart;
+
+  constructor(private postsService: PostsService){}
 
   async getPosts(): Promise<void> {
     this.posts = await this.postsService.getPosts();
   }
-  
-  ngOnInit() {
+
+  ngOnInit(): void {
     this.getPosts();
   }
-  
+
 }
