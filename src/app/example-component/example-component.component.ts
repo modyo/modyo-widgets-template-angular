@@ -1,10 +1,12 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, ViewEncapsulation } from '@angular/core';
 import {Post} from '../interfaces/Post'
 
 @Component({
   selector: 'app-example-component',
   templateUrl: './example-component.component.html',
-  styleUrls: ['./example-component.component.scss']
+  styleUrls: ['./example-component.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 
 export class ExampleComponentComponent implements OnInit {
