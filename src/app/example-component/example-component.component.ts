@@ -18,6 +18,7 @@ export class ExampleComponentComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
   linkFull(): string{
     return this.post.slug;
   }
