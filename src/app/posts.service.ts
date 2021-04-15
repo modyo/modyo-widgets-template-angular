@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Post } from './interfaces/Post';
 import PostRepository from '../repositories/PostRepository';
 
-
 @Injectable({
   providedIn: 'root'
 })

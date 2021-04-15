@@ -9,8 +9,8 @@ import {PostsService} from './posts.service';
 })
 
 export class AppComponent implements OnInit {
-  posts : any[] = [];
-  title = 'modyo-widgets-template-angular-new';
+  posts: any[] = [];
+  title = 'modyo-widgets-template-angular';
   siteName = '';
   year = '';
   heart = faHeart;

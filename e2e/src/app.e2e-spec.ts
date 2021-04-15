@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', async () => {
     await page.navigateTo();
-    expect(await page.getTitleText()).toEqual('modyo-widgets-template-angular-new app is running!');
+    expect(await page.getTitleText()).toEqual('modyo-widgets-template-angular app is running!');
   });
 
   afterEach(async () => {

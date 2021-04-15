@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/modyo-widgets-template-angular-new'),
+      dir: require('path').join(__dirname, './coverage/modyo-widgets-template-angular'),
       subdir: '.',
       reporters: [
         { type: 'html' },
