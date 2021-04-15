@@ -1,0 +1,12 @@
+  <img
+    [src]="post.image"
+    [alt]="post.imageAlt">
+  <h3 class="h4 mt-3">
+    {{ post.title }}
+  </h3>
+  <p class="text-muted content-description" [innerHTML]="post.description">
+
+    </p>
+  <a
+    class="btn btn-outline-primary"
+    [href]="linkFull()">Learn more</a>
