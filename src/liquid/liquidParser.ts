@@ -1,14 +1,6 @@
 import localLiquidVariables from './local-liquid-variables';
 
-import { environment } from '../environments/environment';
-
-let LiquidJS;
-
-if (!environment.production) {
-   LiquidJS = require('liquidjs')
-} else {
-   LiquidJS = null;
-}
+const LiquidJS = process.env.NODE_ENV !== 'production' ? require('liquidjs') : null;
 
 let engine: typeof LiquidJS;
 
