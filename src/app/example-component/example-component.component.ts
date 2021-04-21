@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
+import { Component, Input, ViewEncapsulation } from '@angular/core';
 import {Post} from '../interfaces/Post';
 
 @Component({
@@ -8,16 +8,11 @@ import {Post} from '../interfaces/Post';
   encapsulation: ViewEncapsulation.None,
 })
 
-export class ExampleComponentComponent implements OnInit {
+export class ExampleComponentComponent {
 
   @Input()
   post!: Post;
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
 
   linkFull(): string{
     return this.post.slug;

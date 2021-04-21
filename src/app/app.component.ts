@@ -1,6 +1,9 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
-import {PostsService} from './posts.service';
+import { PostsService } from './posts.service';
+import { Post } from './interfaces/Post';
+import liquidParser from '../liquid/liquidParser';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,10 +12,10 @@ import {PostsService} from './posts.service';
 })
 
 export class AppComponent implements OnInit {
-  posts: any[] = [];
+  posts: Post[] = [];
   title = 'modyo-widgets-template-angular';
-  siteName = '';
-  year = '';
+  siteName = liquidParser.parse('{{site.name}}');
+  year = new Date().getFullYear();
   heart = faHeart;
 
   constructor(private postsService: PostsService) { }

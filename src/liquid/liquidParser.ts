@@ -1,8 +1,16 @@
 import localLiquidVariables from './local-liquid-variables';
 
-let engine: any;
+import { environment } from '../environments/environment';
 
-const LiquidJS = process.env.NODE_ENV !== 'production' ? require('liquidjs') : null;
+let LiquidJS;
+
+if (!environment.production) {
+   LiquidJS = require('liquidjs')
+} else {
+   LiquidJS = null;
+}
+
+let engine: typeof LiquidJS;
 
 if (LiquidJS) {
   engine = new LiquidJS.Liquid({
@@ -13,14 +21,14 @@ if (LiquidJS) {
 
 class LiquidParserClass {
   /** context of liquid drops in local */
-  library: {} = {};
+  library: Record<string, unknown> = {};
 
   /**
    * Create a Client.
    * @param library object containing all local liquid context
    * @returns function with all Liquid instance
    */
-  constructor(library: {}) {
+  constructor(library: Record<string, unknown> ) {
     this.library = library;
   }
   /**
@@ -30,7 +38,7 @@ class LiquidParserClass {
    */
   parseLiquid(liquidString: string): string {
     try {
-      const parsed = engine.parseAndRenderSync(liquidString, this.library);
+      const parsed: string = engine.parseAndRenderSync(liquidString, this.library);
       return parsed;
     } catch (error) {
       return error;
@@ -51,7 +59,7 @@ class LiquidParserClass {
    */
   async parseLiquidAsync(liquidString: string): Promise<string> {
     try {
-      const parsed = await engine.parseAndRender(liquidString, this.library);
+      const parsed: string = await engine.parseAndRender(liquidString, this.library);
       return parsed;
     } catch (error) {
       return error;

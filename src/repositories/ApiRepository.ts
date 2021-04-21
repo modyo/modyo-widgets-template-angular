@@ -1,7 +1,7 @@
 import ApiClient from './clients/ApiClient';
 
 const ApiRepository = {
-  summary(): Promise<any> {
+  summary(): Promise<unknown> {
     return ApiClient.get('summary');
   },
 };
