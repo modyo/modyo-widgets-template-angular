@@ -59,7 +59,7 @@
               "sourceMap": false,
               "namedChunks": false,
               "extractLicenses": true,
-              "vendorChunk": false,
+              "vendorChunk": true,
               "buildOptimizer": true,
               "budgets": [
                 {
@@ -73,6 +73,14 @@
                   "maximumError": "4kb"
                 }
               ]
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": false,
+              "namedChunks": true,
+              "extractLicenses": true,
+              "vendorChunk": true,
+              "buildOptimizer": false
             }
           }
         },
@@ -84,13 +92,10 @@
           "configurations": {
             "production": {
               "browserTarget": "modyo-widgets-template-angular:build:production"
+            },
+            "development": {
+              "browserTarget": "modyo-widgets-template-angular:build:development"
             }
-          }
-        },
-        "extract-i18n": {
-          "builder": "@angular-devkit/build-angular:extract-i18n",
-          "options": {
-            "browserTarget": "modyo-widgets-template-angular:build"
           }
         },
         "test": {
