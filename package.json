@@ -28,7 +28,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "@modyo/sdk": "^1.0.3",
     "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^4.6.1",
     "jquery": "^3.6.0",
     "rxjs": "^6.5.3",
     "tslib": "^2.2.0",
